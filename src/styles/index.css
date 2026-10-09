@@ -1,0 +1,65 @@
+@import 'tailwindcss';
+
+/* ---------- Tipografía: Causten ---------- */
+@font-face {
+  font-family: 'Causten';
+  src: url('/fonts/causten/causten-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Causten';
+  src: url('/fonts/causten/causten-medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Causten';
+  src: url('/fonts/causten/causten-semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Causten';
+  src: url('/fonts/causten/causten-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---------- Design tokens: colores de marca ---------- */
+@theme {
+  /*Fuentes*/
+  --font-sans: 'Causten', ui-sans-serif, system-ui, sans-serif;
+  /* Textos y fondos neutros */
+  --color-ink: #333333;
+  --color-muted: #7a7a7a; /* propuesto: textos secundarios */
+  --color-line: #d9d9e3; /* propuesto: líneas divisorias */
+  --color-surface: #f6f7fb;
+
+  /* Morado de marca */
+  --color-brand-50: #f3f3fd;
+  --color-brand-200: #d7d2ff;
+  --color-brand-400: #9a87f6;
+  --color-brand-500: #765cf3;
+  --color-brand-600: #5f45e0; /* propuesto: hover de botones */
+
+  /* Verde de acento */
+  --color-accent-300: #80e3d8;
+  --color-accent-500: #089686;
+  --color-accent-600: #0bc7b1; /* propuesto: texto verde legible */
+}
+
+/* ---------- Estilos base ---------- */
+@layer base {
+  body {
+    @apply bg-white text-ink antialiased;
+  }
+  button:not(:disabled),
+  [role='button']:not(:disabled) {
+    cursor: pointer;
+  }
+}
